@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOXYLAO - ຮ້ານຂາຍພາແນລ & ເຕີມເກມອອນລາຍ #1</title>
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7', // ສີຟ້າ Cyan 600
+                        primaryDark: '#0369a1',
+                        accent: '#38bdf8', // ຟ້າ Neon
+                        darkBg: '#090d16', // ພື້ນຫຼັງສີດຳ-ຟ້າເຂັ້ມ
+                        cardBg: '#111827'  // ກ່ອງສິນຄ້າ Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;600;700&display=swap');
+        body { font-family: 'Noto Sans Lao', sans-serif; }
+    </style>
+</head>
+<body class="bg-darkBg text-white min-h-screen flex flex-col">
+
+    <!-- Navbar / Header -->
+    <header class="bg-cardBg/90 backdrop-blur border-b border-sky-800/40 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 text-2xl font-black tracking-wider text-sky-400">
+                <i class="fa-solid fa-bolt text-sky-400 animate-pulse"></i>
+                <span>PHOXY<span class="text-white">LAO</span></span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#" class="text-sky-400 hover:text-white transition"><i class="fa-solid fa-house mr-1"></i> ໜ້າຫຼັກ</a>
+                <a href="#products" class="hover:text-sky-400 transition"><i class="fa-solid fa-store mr-1"></i> ສິນຄ້າທັງໝົດ</a>
+                <a href="#wheel" class="hover:text-sky-400 transition"><i class="fa-solid fa-arrows-spin mr-1"></i> ວົງລໍສຸ່ມ</a>
+                <a href="https://wa.me/8562094357757" target="_blank" class="hover:text-sky-400 transition"><i class="fa-solid fa-headset mr-1"></i> ຕິດຕໍ່ແອດມິນ</a>
+            </nav>
+
+            <!-- User Balance & Actions -->
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:flex items-center gap-2 bg-sky-950/60 border border-sky-500/30 px-3 py-1.5 rounded-lg text-xs font-bold text-sky-300">
+                    <i class="fa-solid fa-wallet text-sky-400"></i>
+                    <span>₭ 0</span>
+                </div>
+                <button onclick="toggleModal('loginModal')" class="bg-sky-600 hover:bg-sky-500 text-white px-4 py-1.5 rounded-lg text-sm font-bold shadow-lg shadow-sky-600/30 transition">
+                    <i class="fa-solid fa-right-to-bracket mr-1"></i> ເຂົ້າສູ່ລະບົບ
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Banner Section -->
+        <section class="relative bg-gradient-to-b from-sky-900/30 via-transparent to-transparent py-14 px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <span class="bg-sky-500/10 text-sky-400 border border-sky-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-3">
+                    ⚡ PHOXYLAO SHOP · ພາແນລ FREE FIRE #1 ລາວ
+                </span>
+                <h1 class="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
+                    ຮ້ານຂາຍພາແນລ & ເຕີມເກມ <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">ອອນລາຍ ລາຄາຖືກ 24/7</span>
+                </h1>
+                <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto mb-6">
+                    ບໍລິການເຕີມເກມ ແລະ ພາແນລ Free Fire ປອດໄພ 100% ດ້ວຍລະບົບອັດໂນມັດ ໂດຍທີມງານ PHOXYLAO
+                </p>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="max-w-7xl mx-auto px-4 mb-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-cardBg p-4 rounded-xl border border-sky-900/40 flex items-center gap-3">
+                    <i class="fa-solid fa-users text-2xl text-sky-400"></i>
+                    <div>
+                        <p class="text-xs text-slate-400">ຜູ້ໃຊ້ທັງໝົດ</p>
+                        <p class="text-base font-bold">1,250 ຄົນ</p>
+                    </div>
+                </div>
+                <div class="bg-cardBg p-4 rounded-xl border border-sky-900/40 flex items-center gap-3">
+                    <i class="fa-solid fa-boxes-stacked text-2xl text-sky-400"></i>
+                    <div>
+                        <p class="text-xs text-slate-400">ສິນຄ້າພ້ອມຂາຍ</p>
+                        <p class="text-base font-bold">12 ລາຍການ</p>
+                    </div>
+                </div>
+                <div class="bg-cardBg p-4 rounded-xl border border-sky-900/40 flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-2xl text-sky-400"></i>
+                    <div>
+                        <p class="text-xs text-slate-400">ສຳເລັດແລ້ວ</p>
+                        <p class="text-base font-bold">3,890 ຄັ້ງ</p>
+                    </div>
+                </div>
+                <div class="bg-cardBg p-4 rounded-xl border border-sky-900/40 flex items-center gap-3">
+                    <i class="fa-solid fa-wallet text-2xl text-sky-400"></i>
+                    <div>
+                        <p class="text-xs text-slate-400">ຍອດເຕີມເງິນ</p>
+                        <p class="text-base font-bold text-sky-400">₭ 25,000,000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="max-w-7xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between mb-6 border-b border-sky-900/30 pb-3">
+                <h2 class="text-xl font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-fire text-sky-400"></i> ສິນຄ້າພ້ອມຂາຍ
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-cardBg rounded-xl border border-sky-900/40 overflow-hidden hover:border-sky-500 transition duration-300 group shadow-lg">
+                    <div class="h-44 bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-6xl text-sky-500/40 group-hover:scale-110 transition duration-300"></i>
+                        <span class="absolute top-2 right-2 bg-sky-600 text-[10px] font-bold px-2 py-0.5 rounded text-white uppercase">HOT</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-base mb-1 text-white">ພາແນລ Free Fire (1 ມື້)</h3>
+                        <p class="text-xs text-slate-400 mb-4">ຊ່ວຍເລ່ນ 24/7, ປອດໄພ 100%</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sky-400 font-extrabold text-lg">₭ 20,000</span>
+                            <button class="bg-sky-600 hover:bg-sky-500 text-white text-xs px-3 py-2 rounded-lg font-bold transition">
+                                ຊື້ສິນຄ້າ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-cardBg rounded-xl border border-sky-900/40 overflow-hidden hover:border-sky-500 transition duration-300 group shadow-lg">
+                    <div class="h-44 bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <i class="fa-solid fa-crown text-6xl text-sky-500/40 group-hover:scale-110 transition duration-300"></i>
+                        <span class="absolute top-2 right-2 bg-blue-600 text-[10px] font-bold px-2 py-0.5 rounded text-white uppercase">VIP</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-base mb-1 text-white">ພາແນລ Free Fire (7 ມື້)</h3>
+                        <p class="text-xs text-slate-400 mb-4">ຟັງຊັນເຕັມ, ອັບເດດຟຣີ</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sky-400 font-extrabold text-lg">₭ 100,000</span>
+                            <button class="bg-sky-600 hover:bg-sky-500 text-white text-xs px-3 py-2 rounded-lg font-bold transition">
+                                ຊື້ສິນຄ້າ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-sky-900/40 py-8 mt-12 text-center text-slate-500 text-xs">
+        <p>© 2026 PHOXYLAO Shop — ບໍລິການພາແນລ ແລະ ເຕີມເກມອອນລາຍ</p>
+    </footer>
+
+</body>
+</html>
